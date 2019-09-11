@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <% @articles.each do |article| %>
+      <%= link_to article do %>
+      <div class="col-md-3 margin-top_5per ">
+        <%= image_tag article.image.to_s,size: '250x200',class:"img-padding" %>
+        <div class="title-date">
+          <p class="title"><%= article.title %></p>
+          <%= article.created_at.strftime("%Y年%m月%d日") %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<div class="row">
+  <%= link_to "新規作成",new_article_path,class:" btn btn-primary" %>
+</div>
+
+</div>

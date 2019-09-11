@@ -1,0 +1,22 @@
+<%=form_for article do |f| %>
+
+<div class="form-group">
+  <%=f.label "タイトル" %>
+  <%=f.text_field :title,class:"form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label "画像を選択" %>
+  <%= f.file_field :image %>
+</div>
+
+<div class="form-group">
+  <%=f.label "本文"%>
+  <%=f.text_area :body,rows:10,class:"form-control" %>
+</div>
+
+<div class="form-group">
+  <%=f.submit class:"btn btn-success" %>
+</div>
+
+<% end %>
